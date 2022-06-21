@@ -1,0 +1,38 @@
+//plugins {
+//	id 'org.springframework.boot' version "$springbootVersion"
+//	id 'io.spring.dependency-management' version "$dependencyManagementVersion"
+//	//id 'war'
+//	id 'groovy'
+//	id 'java-library'
+//}
+
+group   = 'by.feature.module'
+version = "$projectMainVersion"
+//sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+bootJar {
+	enabled = false
+}
+
+jar {
+	enabled = true
+}
+
+
+//dependencies {
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	implementation 'org.codehaus.groovy:groovy'
+//	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+//}
+//
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}

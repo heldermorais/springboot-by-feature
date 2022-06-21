@@ -1,0 +1,6 @@
+//rootProject.name = 'by-feature'
+
+include 'by-feature'
+include 'by-feature-common'
+
+include 'by-feature-person','by-feature-pet'
