@@ -1,1 +1,0 @@
-<h1> Hello from Freemarker </h1>

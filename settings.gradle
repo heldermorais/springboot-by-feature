@@ -3,4 +3,6 @@
 include 'by-feature'
 include 'by-feature-common'
 
-include 'by-feature-person','by-feature-pet'
+include 'by-feature-gui'
+
+//include 'by-feature-person','by-feature-pet'

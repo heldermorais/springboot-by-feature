@@ -3,7 +3,8 @@ dependencies {
 
     //implementation project(':by-feature-common')
 
-    implementation project(':by-feature-person')
-    implementation project(':by-feature-pet')
+    implementation project(':by-feature-gui')
+//    implementation project(':by-feature-person')
+//    implementation project(':by-feature-pet')
 
 }
