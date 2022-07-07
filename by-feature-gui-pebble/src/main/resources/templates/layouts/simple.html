@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>{% block title %}My Website{% endblock %}</title>
+
+    <script src="webjars/jquery/3.6.0/dist/jquery.min.js" ></script>
+    <script src="js/hotwire/turbo.es2017-umd.js" ></script>
+    <link rel="stylesheet" type="text/css" href="libs/DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="libs/DataTables/datatables.min.js"></script>
+
+    {{ beans.guiHookHelper.executeHook('gui.head.content') }}
+    {% hookedblock head_content %}<!-- Isto eh um teste -->{% endblock %}
+</head>
+
+<body>
+
+    <div id="content">
+
+        {% set event = beans.guiHookHelper.executeHookAndReturn('gui.body.content') %}
+
+        {% if event.getGuiOutput() == null %}
+           {% block content %}{% endblock %}
+        {% else %}
+           {{ event.getGuiOutput() | raw }}
+        {% endif %}
+
+    </div>
+
+    <div id="footer">
+        {% block footer %}
+        Copyright 2013
+        {% endblock %}
+    </div>
+
+    {% block js_onBody %}{% endblock %}
+
+    <script type="application/javascript">
+
+        $(document).ready(function () {
+            $('.datatable').DataTable();
+
+            {% block js_initialization %}
+            // initialization
+            {% endblock %}
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -26,7 +26,8 @@ class HookEventsService {
 
         HexaGenericEvent event = HexaGenericEvent.builderWith().name(hookName).source(this.applicationContext).build()
 
-        this.applicationContext.publishEvent(event)
+        //this.applicationContext.publishEvent(event)
+        internalPublishEvent(event)
 
     }
 
@@ -34,7 +35,8 @@ class HookEventsService {
 
         HexaGenericEvent event = HexaGenericEvent.builderWith().name(hookName).source(this.applicationContext).build()
 
-        this.applicationContext.publishEvent(event)
+        //this.applicationContext.publishEvent(event)
+        internalPublishEvent(event)
 
         return event
 
@@ -45,7 +47,8 @@ class HookEventsService {
 
         HexaGenericEvent event = HexaGenericEvent.builder().name(hookName).source(this.applicationContext).context( context ).build()
 
-        this.applicationContext.publishEvent(event)
+        //this.applicationContext.publishEvent(event)
+        internalPublishEvent(event)
 
     }
 
@@ -54,7 +57,8 @@ class HookEventsService {
 
         HexaGenericEvent event = HexaGenericEvent.builder().name(hookName).source(this.applicationContext).context( context ).build()
 
-        this.applicationContext.publishEvent(event)
+        //this.applicationContext.publishEvent(event)
+        internalPublishEvent(event)
 
         return event
 
@@ -64,7 +68,8 @@ class HookEventsService {
 
         event.context.putAll(context)
 
-        this.applicationContext.publishEvent(event)
+        //this.applicationContext.publishEvent(event)
+        internalPublishEvent(event)
 
         return event
 
@@ -72,13 +77,17 @@ class HookEventsService {
 
     HexaGenericEvent executeHookAndReturn( HexaGenericEvent event  ) {
 
-        this.applicationContext.publishEvent(event)
+
+        internalPublishEvent(event)
 
         return event
 
     }
 
-
+    protected internalPublishEvent(HexaGenericEvent event) {
+        log.debug "Publishing Hook Event - ${event.name}"
+        this.applicationContext.publishEvent(event)
+    }
 
 
 //    @EventListener

@@ -1,9 +1,10 @@
 
 dependencies {
 
-    //implementation project(':by-feature-common')
+    implementation project(':by-feature-common')
 
     implementation project(':by-feature-gui')
+    implementation project(':by-feature-gui-pebble')
 //    implementation project(':by-feature-person')
 //    implementation project(':by-feature-pet')
 

@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/by-feature" />
             <option value="$PROJECT_DIR$/by-feature-common" />
             <option value="$PROJECT_DIR$/by-feature-gui" />
+            <option value="$PROJECT_DIR$/by-feature-gui-pebble" />
           </set>
         </option>
       </GradleProjectSettings>

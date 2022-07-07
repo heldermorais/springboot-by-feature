@@ -34,7 +34,9 @@ dependencies {
 
 	api project(':by-feature-common')
 
-	api "io.pebbletemplates:pebble-spring-boot-starter:$pebbleVersion"
+	api 'com.github.xmlet:htmlflow:3.5'
+
+	implementation 'org.webjars.npm:jquery:3.6.0'
 
 }
 //
