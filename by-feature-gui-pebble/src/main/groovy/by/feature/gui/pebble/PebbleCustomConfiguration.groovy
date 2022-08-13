@@ -1,6 +1,7 @@
 package by.feature.gui.pebble
 
 import by.feature.common.events.HookEventsService
+import by.feature.gui.pebble.ext.CustomPebbleSpringExtension
 import com.mitchellbosecke.pebble.PebbleEngine
 import com.mitchellbosecke.pebble.attributes.methodaccess.MethodAccessValidator
 import com.mitchellbosecke.pebble.boot.autoconfigure.PebbleProperties
@@ -11,6 +12,8 @@ import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.lang.Nullable
+
+
 
 @Configuration(proxyBeanMethods = false)
 class PebbleCustomConfiguration {

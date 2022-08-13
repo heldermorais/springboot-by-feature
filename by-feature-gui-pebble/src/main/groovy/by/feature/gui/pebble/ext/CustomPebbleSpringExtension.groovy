@@ -1,4 +1,4 @@
-package by.feature.gui.pebble
+package by.feature.gui.pebble.ext
 
 import by.feature.common.events.HookEventsService
 import com.mitchellbosecke.pebble.spring.extension.SpringExtension
