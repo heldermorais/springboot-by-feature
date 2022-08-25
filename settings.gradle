@@ -6,4 +6,8 @@ include 'by-feature-common'
 include 'by-feature-gui'
 include 'by-feature-gui-pebble'
 
+include 'by-feature-petclinic'
+
+
+include 'by-feature-dsl', 'by-feature-ast'
 //include 'by-feature-person','by-feature-pet'

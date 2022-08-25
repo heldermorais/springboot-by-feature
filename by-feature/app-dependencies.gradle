@@ -8,4 +8,11 @@ dependencies {
 //    implementation project(':by-feature-person')
 //    implementation project(':by-feature-pet')
 
+
+
+    // https://mvnrepository.com/artifact/org.spockframework/spock-core
+    testImplementation 'org.spockframework:spock-core:2.1-groovy-3.0'
+    testImplementation 'org.spockframework:spock-spring:2.1-groovy-3.0'
+
+
 }

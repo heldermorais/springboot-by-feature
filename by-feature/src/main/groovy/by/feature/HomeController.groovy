@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping
 @Slf4j
 class HomeController {
 
+    protected HomeService homeService
+
+    HomeController ( HomeService homeService ){
+        this.homeService = homeService
+    }
+
     @GetMapping("/")
     String index(){
         log.debug "index() - BEGIN"
