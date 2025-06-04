@@ -1,7 +1,6 @@
-package tcmpa.nie.byfeature.petclinic.vet.specialty.persistence;
+package tcmpa.nie.byfeature.petclinic.vet.specialty.internal;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import tcmpa.nie.byfeature.petclinic.vet.specialty.model.Specialty;
 
 import java.util.Collection;
 

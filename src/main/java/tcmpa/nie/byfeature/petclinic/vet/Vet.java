@@ -32,7 +32,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import tcmpa.nie.byfeature.petclinic.model.NamedEntity;
 import tcmpa.nie.byfeature.petclinic.model.Person;
-import tcmpa.nie.byfeature.petclinic.vet.specialty.model.Specialty;
+import tcmpa.nie.byfeature.petclinic.vet.specialty.internal.Specialty;
 //import jakarta.xml.bind.annotation.XmlElement;
 
 /**

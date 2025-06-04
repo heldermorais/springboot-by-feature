@@ -2,8 +2,8 @@ package tcmpa.nie.byfeature.petclinic.vet.specialty;
 
 import tcmpa.nie.byfeature.petclinic.common.UseCase;
 import tcmpa.nie.byfeature.petclinic.common.usecase.jpa.CrudJpaUseCaseImpl;
-import tcmpa.nie.byfeature.petclinic.vet.specialty.model.Specialty;
-import tcmpa.nie.byfeature.petclinic.vet.specialty.persistence.SpecialtyRepository;
+import tcmpa.nie.byfeature.petclinic.vet.specialty.internal.Specialty;
+import tcmpa.nie.byfeature.petclinic.vet.specialty.internal.SpecialtyRepository;
 
 import java.util.Collection;
 

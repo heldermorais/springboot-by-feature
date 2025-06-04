@@ -15,6 +15,6 @@
  */
 
 /**
- * The classes in this package represent utilities used by the domain.
+ * The classes in this package represent utilities used by all domain classes.
  */
 package tcmpa.nie.byfeature.petclinic.model;

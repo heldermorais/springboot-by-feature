@@ -3,7 +3,7 @@ package tcmpa.nie.byfeature.petclinic.vet.specialty;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import tcmpa.nie.byfeature.petclinic.vet.specialty.model.Specialty;
+import tcmpa.nie.byfeature.petclinic.vet.specialty.internal.Specialty;
 
 import java.util.Collection;
 

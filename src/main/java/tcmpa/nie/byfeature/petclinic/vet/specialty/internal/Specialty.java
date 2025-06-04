@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tcmpa.nie.byfeature.petclinic.vet.specialty.model;
+package tcmpa.nie.byfeature.petclinic.vet.specialty.internal;
 
 //import org.springframework.samples.petclinic.model.NamedEntity;
 
