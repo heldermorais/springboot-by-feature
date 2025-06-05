@@ -1,14 +1,11 @@
 package tcmpa.nie.byfeature.petclinic.common.services;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.jpa.repository.JpaRepository;
-import tcmpa.nie.byfeature.petclinic.common.usecase.persistence.ICrudUseCase;
+import tcmpa.nie.byfeature.petclinic.common.usecase.persistence.CrudUseCase;
 
 import java.util.Collection;
-import java.util.List;
 
-public abstract class AbstractCrudServices<R extends JpaRepository<T,ID>, T , ID > implements ICrudUseCase<T,ID> {
+public abstract class AbstractCrudServices<R extends JpaRepository<T,ID>, T , ID > implements CrudUseCase<T,ID> {
 
 
     protected final R repository;

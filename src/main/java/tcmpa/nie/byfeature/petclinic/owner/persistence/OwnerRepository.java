@@ -40,35 +40,5 @@ import tcmpa.nie.byfeature.petclinic.pet.PetType;
  */
 public interface OwnerRepository extends JpaRepository<Owner, Integer> {
 
-	/**
-	 * Retrieve all {@link PetType}s from the data store.
-	 * @return a Collection of {@link PetType}s.
-	 */
-	@Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
-	List<PetType> findPetTypes();
-
-	/**
-	 * Retrieve {@link Owner}s from the data store by last name, returning all owners
-	 * whose last name <i>starts</i> with the given name.
-	 * @param lastName Value to search for
-	 * @return a Collection of matching {@link Owner}s (or an empty Collection if none
-	 * found)
-	 */
-	Page<Owner> findByLastNameStartingWith(String lastName, Pageable pageable);
-
-	/**
-	 * Retrieve an {@link Owner} from the data store by id.
-	 * <p>
-	 * This method returns an {@link Optional} containing the {@link Owner} if found. If
-	 * no {@link Owner} is found with the provided id, it will return an empty
-	 * {@link Optional}.
-	 * </p>
-	 * @param id the id to search for
-	 * @return an {@link Optional} containing the {@link Owner} if found, or an empty
-	 * {@link Optional} if not found.
-	 * @throws IllegalArgumentException if the id is null (assuming null is not a valid
-	 * input for id)
-	 */
-	Optional<Owner> findById(@Nonnull Integer id);
 
 }

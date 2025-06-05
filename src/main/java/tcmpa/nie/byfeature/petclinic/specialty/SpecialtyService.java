@@ -8,10 +8,10 @@ import java.util.Collection;
 
 
 @Service
-public class SpecialtyServices extends AbstractCrudServices<SpecialtyRepository, Specialty, Integer> implements ISpecialtyUseCases {
+public class SpecialtyService extends AbstractCrudServices<SpecialtyRepository, Specialty, Integer> implements SpecialtyUseCases {
 
 
-    public SpecialtyServices(SpecialtyRepository repository) {
+    public SpecialtyService(SpecialtyRepository repository) {
         super(repository);
     }
 

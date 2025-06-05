@@ -1,10 +1,10 @@
 package tcmpa.nie.byfeature.petclinic.common.usecase.persistence;
 
-import tcmpa.nie.byfeature.petclinic.common.usecase.IUseCase;
+import tcmpa.nie.byfeature.petclinic.common.usecase.UseCase;
 
 import java.util.Collection;
 
-public interface ICrudUseCase<T,ID> extends IUseCase {
+public interface CrudUseCase<T,ID> extends UseCase {
 
     Collection<T> findAll();
 

@@ -15,17 +15,11 @@
  */
 package tcmpa.nie.byfeature.petclinic.vet;
 
-import java.util.List;
+import java.util.Collection;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import tcmpa.nie.byfeature.petclinic.vet.persistence.VetRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Juergen Hoeller
@@ -33,47 +27,30 @@ import tcmpa.nie.byfeature.petclinic.vet.persistence.VetRepository;
  * @author Ken Krebs
  * @author Arjen Poutsma
  */
-@Controller
+@RestController
+@RequestMapping("/vet")
+@Tag(name = "Vet", description = "Operations related to vets")
 class VetController {
 
-	private final VetRepository vetRepository;
+	protected final VetUseCases vetUseCases;
 
-	public VetController(VetRepository vetRepository) {
-		this.vetRepository = vetRepository;
+    VetController(VetUseCases vetUseCases) {
+        this.vetUseCases = vetUseCases;
+    }
+
+	@GetMapping("/")
+	@Operation(summary = "Find all vets", description = "Retrieves all vets from the system")
+	public Collection<Vet> findAll() {
+		return this.vetUseCases.findAll();
 	}
 
-	@GetMapping("/vets.html")
-	public String showVetList(@RequestParam(defaultValue = "1") int page, Model model) {
-		// Here we are returning an object of type 'Vets' rather than a collection of Vet
-		// objects so it is simpler for Object-Xml mapping
-		Vets vets = new Vets();
-		Page<Vet> paginated = findPaginated(page);
-		vets.getVetList().addAll(paginated.toList());
-		return addPaginationModel(page, paginated, model);
-	}
 
-	private String addPaginationModel(int page, Page<Vet> paginated, Model model) {
-		List<Vet> listVets = paginated.getContent();
-		model.addAttribute("currentPage", page);
-		model.addAttribute("totalPages", paginated.getTotalPages());
-		model.addAttribute("totalItems", paginated.getTotalElements());
-		model.addAttribute("listVets", listVets);
-		return "vets/vetList";
-	}
+	@GetMapping("/find-by-specialty")
+	@Operation(summary = "Find all vets by specialty", description = "Retrieves all vets with a specialty from the system")
+	public Collection<Vet> findAllBySpecialty(@RequestParam("keyword") String keyword) {
 
-	private Page<Vet> findPaginated(int page) {
-		int pageSize = 5;
-		Pageable pageable = PageRequest.of(page - 1, pageSize);
-		return vetRepository.findAll(pageable);
-	}
+		return this.vetUseCases.findBySpecialty(keyword);
 
-	@GetMapping({ "/vets" })
-	public @ResponseBody Vets showResourcesVetList() {
-		// Here we are returning an object of type 'Vets' rather than a collection of Vet
-		// objects so it is simpler for JSon/Object mapping
-		Vets vets = new Vets();
-		vets.getVetList().addAll(this.vetRepository.findAll());
-		return vets;
 	}
 
 }
