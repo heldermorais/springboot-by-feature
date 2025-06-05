@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tcmpa.nie.byfeature.petclinic.owner;
+package tcmpa.nie.byfeature.petclinic.pet;
 
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Component;
+import tcmpa.nie.byfeature.petclinic.owner.persistence.OwnerRepository;
 
 import java.text.ParseException;
 import java.util.Collection;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tcmpa.nie.byfeature.petclinic.owner;
+package tcmpa.nie.byfeature.petclinic.pet;
 
 import java.util.Map;
 import java.util.Optional;
@@ -29,6 +29,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import jakarta.validation.Valid;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import tcmpa.nie.byfeature.petclinic.owner.Owner;
+import tcmpa.nie.byfeature.petclinic.owner.persistence.OwnerRepository;
 
 /**
  * @author Juergen Hoeller

@@ -33,6 +33,8 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.NotBlank;
 import tcmpa.nie.byfeature.petclinic.model.Person;
+import tcmpa.nie.byfeature.petclinic.pet.Pet;
+import tcmpa.nie.byfeature.petclinic.pet.Visit;
 
 /**
  * Simple JavaBean domain object representing an owner.

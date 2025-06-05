@@ -16,10 +16,10 @@ public class ApplicationArchitectureTests {
 
         var modules = ApplicationModules.of(PetclinicByFeatureApplication.class).verify();
 
-        new Documenter(modules) // Documenter is used to generate documentation for the modules
-                .writeDocumentation()
-                .writeModulesAsPlantUml()
-                .writeIndividualModulesAsPlantUml();
+//        new Documenter(modules) // Documenter is used to generate documentation for the modules
+//                .writeDocumentation()
+//                .writeModulesAsPlantUml()
+//                .writeIndividualModulesAsPlantUml();
 
         Assert.isTrue(true, "Architecture is ok for now");
     }

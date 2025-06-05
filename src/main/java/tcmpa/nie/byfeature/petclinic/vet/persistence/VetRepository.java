@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tcmpa.nie.byfeature.petclinic.vet;
+package tcmpa.nie.byfeature.petclinic.vet.persistence;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.dao.DataAccessException;
@@ -21,6 +21,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import tcmpa.nie.byfeature.petclinic.vet.Vet;
 
 import java.util.Collection;
 
